@@ -1,0 +1,220 @@
+.hero-container {
+   width: 100%;
+   background-color: #60a5fa;
+   /* Tailwind bg-blue-400 */
+   padding: 4rem 1rem;
+   /* py-16 px-4 */
+}
+
+.hero-content {
+   max-width: 85%;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+   .hero-content {
+      flex-direction: row;
+   }
+}
+
+.hero-text {
+   width: 100%;
+   text-align: center;
+   margin-bottom: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+   .hero-text {
+      width: 50%;
+      text-align: left;
+      margin-bottom: 0;
+   }
+}
+
+.hero-features {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+   .hero-features {
+      flex-direction: row;
+   }
+}
+
+.feature {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+}
+
+.feature-icon {
+   width: 1.5rem;
+   height: 1.5rem;
+   color: #38a756;
+}
+
+.feature-text {
+   color: #374151;
+   font-weight: 600;
+}
+
+.hero-title {
+   font-size: 2.25rem;
+   /* text-4xl */
+   font-weight: 700;
+   line-height: 1.2;
+   margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+   .hero-title {
+      font-size: 3rem;
+      /* md:text-5xl */
+   }
+}
+
+@media (min-width: 1024px) {
+   .hero-title {
+      font-size: 3.75rem;
+      /* lg:text-6xl */
+   }
+}
+
+.highlight-text {
+   color: #3734a9;
+}
+
+.hero-description {
+   font-size: 1.125rem;
+   color: #374151;
+   margin-bottom: 2rem;
+   max-width: 36rem;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+@media (min-width: 1024px) {
+   .hero-description {
+      margin-left: 0;
+      margin-right: 0;
+   }
+}
+
+.hero-buttons {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+   .hero-buttons {
+      justify-content: flex-start;
+   }
+}
+
+.shop-button {
+   background-color: #3734a9;
+   color: white;
+   font-weight: 600;
+   padding: 0.75rem 1.5rem;
+   border-radius: 0.5rem;
+   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+   transition: background-color 0.3s;
+   border: none;
+   cursor: pointer;
+}
+
+.shop-button:hover {
+   background-color: rgba(55, 52, 169, 0.9);
+}
+
+.watch-reviews {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   color: #3734a9;
+   font-weight: 600;
+   text-decoration: none;
+}
+
+.watch-icon {
+   width: 2rem;
+   height: 2rem;
+}
+
+.hero-images {
+   width: 100%;
+   height: 25rem;
+   /* 400px */
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   position: relative;
+}
+
+@media (min-width: 768px) {
+   .hero-images {
+      height: 31.25rem;
+      /* 500px */
+   }
+}
+
+.hero-women {
+   width: 18.75rem;
+   /* 300px */
+   height: 18.75rem;
+   border-radius: 50%;
+   border: 4px solid white;
+   overflow: hidden;
+   position: relative;
+   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+   .hero-women {
+      width: 25rem;
+      height: 25rem;
+   }
+}
+
+.hero-women img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.hero-men {
+   position: absolute;
+   top: 50%;
+   left: 1.5rem;
+   width: 10rem;
+   height: 10rem;
+   border-radius: 50%;
+   overflow: hidden;
+   border: 4px solid white;
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+   transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+   .hero-men {
+      width: 15rem;
+      height: 15rem;
+   }
+}
+
+.hero-men img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}

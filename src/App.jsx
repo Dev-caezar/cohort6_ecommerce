@@ -1,9 +1,11 @@
 import React from 'react'
 import { RouterProvider } from 'react-router-dom'
-import { Element } from './routes/Router'
+import Router from './routes/Router'
+import { AppContext } from './utils/AppContext'
 
 const App = () => {
-  return <RouterProvider router={Element} />
+  const name = "Tunde"
+  return <Router value={name} />
 }
 
 export default App

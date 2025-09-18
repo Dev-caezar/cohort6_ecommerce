@@ -1,0 +1,128 @@
+.signup-container {
+   width: 100%;
+   height: 100vh;
+   background-color: #60a5fa;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.signup-card {
+   width: 100%;
+   max-width: 500px;
+   background: white;
+   border-radius: 12px;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+   padding: 2rem;
+}
+
+/* Title */
+.signup-title {
+   font-size: 2rem;
+   font-weight: 800;
+   text-align: center;
+   margin-bottom: 1.5rem;
+   color: #111827;
+   /* gray-900 */
+}
+
+/* Form */
+.signup-form {
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+}
+
+/* Input group */
+.form-group {
+   display: flex;
+   flex-direction: column;
+}
+
+.form-group label {
+   font-size: 0.9rem;
+   font-weight: 500;
+   color: #374151;
+   /* gray-700 */
+   margin-bottom: 0.3rem;
+}
+
+.form-group input {
+   padding: 0.6rem 0.8rem;
+   border: 1px solid #d1d5db;
+   /* gray-300 */
+   border-radius: 6px;
+   font-size: 0.9rem;
+   color: #111827;
+   outline: none;
+}
+
+.form-group input:focus {
+   border-color: #6366f1;
+   /* indigo-500 */
+   box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* Button */
+.signup-button {
+   width: 100%;
+   padding: 0.8rem;
+   border: none;
+   border-radius: 6px;
+   font-size: 1rem;
+   font-weight: 600;
+   color: white;
+   background-color: #4f46e5;
+   /* indigo-600 */
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+   background-color: #4338ca;
+   /* indigo-700 */
+}
+
+/* Sign in text */
+.signin-text {
+   margin-top: 1.5rem;
+   text-align: center;
+   font-size: 0.9rem;
+   color: #4b5563;
+   /* gray-600 */
+}
+
+.signin-link {
+   font-weight: 500;
+   color: #4f46e5;
+   text-decoration: none;
+}
+
+.signin-link:hover {
+   color: #4338ca;
+}
+
+.google-button {
+   margin-top: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   background-color: white;
+   color: #444;
+   border: 1px solid #ccc;
+   padding: 10px;
+   font-weight: 500;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: all 0.2s ease;
+}
+
+.google-button img {
+   width: 20px;
+   height: 20px;
+}
+
+.google-button:hover {
+   background-color: #f1f1f1;
+}

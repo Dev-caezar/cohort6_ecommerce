@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaSearch, FaShoppingCart } from 'react-icons/fa';
 import { IoSearchOutline } from "react-icons/io5";
 import { IoIosCart } from "react-icons/io";
 import logo from "../assets/public/logo.svg";
+import { useNavigate } from 'react-router-dom';
+import { AppContext } from '../utils/AppContext';
 
 const Header = () => {
    const navItems = ["Home", "Contact", "About"];
    const [showCart, setShowCart] = useState(false);
-   const [cartItems, setCartItems] = useState([
-      { id: 1, name: 'T-shirt', price: 25, quantity: 1 },
-      { id: 2, name: 'Jeans', price: 60, quantity: 1 }
-   ]);
+   const { cart } = useContext(AppContext)
+   console.log(cart)
+
+
+   const navigate = useNavigate();
 
    return (
       <div className='sticky top-0 w-full h-[18%] bg-blue-400 flex items-center justify-center z-50'>
@@ -32,11 +35,13 @@ const Header = () => {
                <div className='relative cursor-pointer' onClick={() => setShowCart(!showCart)}>
                   <IoIosCart className='text-black text-[30px] hover:text-[#3734A9] duration-300' />
                   <span className='absolute -top-2 -right-2 bg-red-500 text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center'>
-                     {cartItems.length}
+                     {cart.length}
                   </span>
                </div>
 
-               <button className='bg-[#3734A9] text-white text-[14px] font-[500] px-5 py-3 rounded-lg hover:bg-opacity-80 duration-300'>
+               <button
+                  onClick={() => navigate('/login')}
+                  className='bg-[#3734A9] text-white text-[14px] font-[500] px-5 py-3 rounded-lg hover:bg-opacity-80 duration-300'>
                   Get Started
                </button>
             </div>
@@ -45,18 +50,18 @@ const Header = () => {
          {showCart && (
             <div className='absolute top-full right-[5%] mt-2 w-72 bg-white rounded-lg shadow-lg z-100 p-4'>
                <h5 className='font-bold text-lg mb-2'>Your Cart</h5>
-               {cartItems.length > 0 ? (
+               {/* {cart.length > 0 ? (
                   <ul>
-                     {cartItems.map(item => (
+                     {cart.map(item => (
                         <li key={item.id} className='flex justify-between items-center py-1 border-b border-gray-200 last:border-b-0'>
-                           <span>{item.name} x {item.quantity}</span>
+                           <span>{item.slug} x {item.quantity}</span>
                            <span>${item.price}</span>
                         </li>
                      ))}
                   </ul>
                ) : (
                   <p className='text-gray-500'>Your cart is empty.</p>
-               )}
+               )} */}
             </div>
          )}
       </div>
